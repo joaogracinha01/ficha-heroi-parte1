@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conheça Nero Vael, o Portador da Chama Azul. História, habilidades e relíquias de um guardião que protege a última centelha de Vhalora.">
+  <meta name="theme-color" content="#080f18">
+  <title>Nero Vael | O Portador da Chama Azul</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23080f18'/%3E%3Cpath d='M16 3 20 12 29 16 20 20 16 29 12 20 3 16 12 12Z' fill='%2382d9f7'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Cabeçalho: os quatro links levam às seções da mesma página. -->
+  <header class="cabecalho" id="topo">
+    <div class="container cabecalho-conteudo">
+      <a class="marca" href="#topo" aria-label="Nero Vael, início"><span aria-hidden="true">✦</span> NERO VAEL</a>
+      <nav class="menu" aria-label="Navegação principal">
+        <a href="#sobre">O herói</a>
+        <a href="#atributos">Atributos</a>
+        <a href="#inventario">Inventário</a>
+        <a href="#guilda">A guilda</a>
+      </nav>
+      <span class="registro">REGISTRO Nº 024</span>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- 01. Sobre o Herói: identidade, retrato e história original. -->
+    <section class="sobre container" id="sobre" aria-labelledby="nome-heroi">
+      <div class="apresentacao">
+        <p class="sobretitulo"><span aria-hidden="true">✦</span> CRÔNICAS DE VHALORA</p>
+        <p class="classe">GUARDIÃO PIROMANTE <span aria-hidden="true">/</span> NÍVEL 24</p>
+        <h1 id="nome-heroi">Nero <span>Vael</span></h1>
+        <p class="titulo-heroi">O Portador da Chama Azul</p>
+        <p class="resumo">Quando sua cidade virou cinzas,<br class="quebra-desktop"> ele escolheu ser a luz que restou.</p>
+        <a class="botao botao-primario" href="#atributos"><span aria-hidden="true">✧</span> Explorar habilidades</a>
+        <dl class="dados-heroi">
+          <div><dt>ORIGEM</dt><dd>Vhalora</dd></div>
+          <div><dt>AFINIDADE</dt><dd>Fogo etéreo</dd></div>
+          <div><dt>ALINHAMENTO</dt><dd>Protetor</dd></div>
+        </dl>
+      </div>
+      <figure class="retrato">
+        <img src="imagens/nero-vael.png" alt="Nero Vael, guardião de cabelos escuros e manto azul-noturno, segurando uma chama azul diante das ruínas de Vhalora." width="768" height="1024" fetchpriority="high">
+        <figcaption><span aria-hidden="true">✦</span><div><span class="legenda-menor">ÚLTIMO GUARDIÃO DE VHALORA</span><strong>A chama ainda vive.</strong></div><span class="selo-nivel">NV.<b>24</b></span></figcaption>
+      </figure>
+      <div class="historia">
+        <div><p class="sobretitulo">01 / SOBRE O HERÓI</p><h2>Das cinzas, <br>um juramento.</h2></div>
+        <div class="historia-texto"><p>Nero era aprendiz de ferreiro em Vhalora, uma cidade erguida ao redor de um fogo que guardava as memórias de seus habitantes. Na Noite Sem Aurora, a Ordem do Véu tentou roubar essa fonte de poder. As torres caíram. O fogo se apagou.</p><p>Entre os escombros, Nero encontrou uma última centelha azul. Ao protegê-la com as próprias mãos, vinculou sua vida às lembranças da cidade. Agora, percorre as terras devastadas em busca dos três fragmentos do Farol de Vhalora, capaz de devolver um lar aos sobreviventes.</p><p class="limite-poder">Cada vez que usa a chama além do limite, perde uma lembrança pessoal. Seu maior desafio é salvar o passado sem esquecer quem ele é.</p></div>
+      </div>
+    </section>
+
+    <!-- 02. Atributos: números e barras estáticas; habilidades sem JavaScript. -->
+    <section class="secao-atributos" id="atributos" aria-labelledby="titulo-atributos">
+      <div class="container">
+        <div class="cabecalho-secao"><div><p class="sobretitulo">02 / ATRIBUTOS & HABILIDADES</p><h2 id="titulo-atributos">O poder que ainda arde.</h2></div><p>Forjado pela perda. <br>Guiado pela memória.</p></div>
+        <div class="painel-poderes">
+          <div class="atributos">
+            <h3 class="titulo-pequeno">ATRIBUTOS DO GUARDIÃO</h3>
+            <div class="atributo"><div class="rotulo-atributo"><span><span class="icone" aria-hidden="true">✦</span> Magia</span><span><strong>96</strong> / 100</span></div><div class="barra-atributo" role="meter" aria-label="Magia" aria-valuemin="0" aria-valuemax="100" aria-valuenow="96"><div class="preenchimento" style="width:96%"></div></div></div>
+            <div class="atributo"><div class="rotulo-atributo"><span><span class="icone" aria-hidden="true">◇</span> Defesa</span><span><strong>82</strong> / 100</span></div><div class="barra-atributo" role="meter" aria-label="Defesa" aria-valuemin="0" aria-valuemax="100" aria-valuenow="82"><div class="preenchimento" style="width:82%"></div></div></div>
+            <div class="atributo"><div class="rotulo-atributo"><span><span class="icone" aria-hidden="true">ϟ</span> Agilidade</span><span><strong>74</strong> / 100</span></div><div class="barra-atributo" role="meter" aria-label="Agilidade" aria-valuemin="0" aria-valuemax="100" aria-valuenow="74"><div class="preenchimento" style="width:74%"></div></div></div>
+            <div class="atributo"><div class="rotulo-atributo"><span><span class="icone" aria-hidden="true">⚔</span> Força</span><span><strong>68</strong> / 100</span></div><div class="barra-atributo" role="meter" aria-label="Força" aria-valuemin="0" aria-valuemax="100" aria-valuenow="68"><div class="preenchimento" style="width:68%"></div></div></div>
+            <p class="nota-atributos">Escala de 0 a 100 · especialidade em magia e proteção</p>
+          </div>
+          <div class="habilidades"><h3 class="titulo-pequeno">DOMÍNIOS DA CHAMA AZUL</h3><ul class="lista-habilidades">
+            <li><span class="simbolo-habilidade" aria-hidden="true">✧</span><div><h4>Fogo da memória</h4><p>Revela rastros do passado em objetos e ilumina caminhos ocultos pela Ordem do Véu.</p><span class="categoria">REVELAÇÃO · 30 DE MANA</span></div></li>
+            <li><span class="simbolo-habilidade" aria-hidden="true">◇</span><div><h4>Manto de brasas</h4><p>Envolve aliados em um escudo de fogo frio que absorve o impacto dos ataques.</p><span class="categoria">PROTEÇÃO · 40 DE MANA</span></div></li>
+            <li><span class="simbolo-habilidade" aria-hidden="true">ϟ</span><div><h4>Passo de cinza</h4><p>Transforma o corpo em cinzas por um instante para atravessar uma curta distância.</p><span class="categoria">MOBILIDADE · 20 DE MANA</span></div></li>
+          </ul></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. Inventário: CSS Grid com um, dois ou três cards por linha. -->
+    <section class="inventario container" id="inventario" aria-labelledby="titulo-inventario">
+      <div class="cabecalho-secao"><div><p class="sobretitulo">03 / INVENTÁRIO & CONQUISTAS</p><h2 id="titulo-inventario">Nem tudo se perdeu.</h2></div><p>Relíquias que carregam <br>mais do que poder.</p></div>
+      <div class="grade-inventario">
+        <article class="card-item item-lendario"><div class="topo-item"><span class="raridade lendario">LENDÁRIO</span><span class="numero-item">01</span></div><div class="icone-item" aria-hidden="true">✦</div><p class="tipo-item">RELÍQUIA · VÍNCULO VITAL</p><h3>Coração de Vhalora</h3><p>A última centelha da cidade, guardada em um medalhão de obsidiana. Pulsa quando um sobrevivente está por perto.</p><div class="efeito-item"><span aria-hidden="true">✧</span> +20 de afinidade arcana</div></article>
+        <article class="card-item"><div class="topo-item"><span class="raridade raro">RARO</span><span class="numero-item">02</span></div><div class="icone-item" aria-hidden="true">⚔</div><p class="tipo-item">ARMA · ESPADA LONGA</p><h3>Lâmina do Alvorecer</h3><p>Forjada por Nero com o aço da oficina de seu pai. Seu fio azul corta os selos que mantêm as ruínas adormecidas.</p><div class="efeito-item"><span aria-hidden="true">⚔</span> +12 de poder ofensivo</div></article>
+        <article class="card-item"><div class="topo-item"><span class="raridade raro">RARO</span><span class="numero-item">03</span></div><div class="icone-item" aria-hidden="true">◇</div><p class="tipo-item">ARMADURA · MANTO</p><h3>Manto do Último Vigia</h3><p>Tecido com fios resistentes às brasas. No forro, Nero bordou os nomes das pessoas que prometeu reencontrar.</p><div class="efeito-item"><span aria-hidden="true">◇</span> +15 de resistência</div></article>
+      </div>
+      <div class="conquistas"><h3 class="titulo-pequeno">MARCAS DA JORNADA</h3><ul><li><span aria-hidden="true">☼</span><div><strong>Além das cinzas</strong><span>Sobreviveu à Noite Sem Aurora.</span></div></li><li><span aria-hidden="true">♜</span><div><strong>Escudo dos esquecidos</strong><span>Protegeu 32 refugiados no Vale Mudo.</span></div></li><li><span aria-hidden="true">✧</span><div><strong>Uma luz no horizonte</strong><span>Recuperou o primeiro fragmento do Farol.</span></div></li></ul></div>
+    </section>
+
+    <!-- 04. Contato com a Guilda: canal fictício explicitamente identificado. -->
+    <section class="guilda" id="guilda" aria-labelledby="titulo-guilda"><div class="container guilda-conteudo"><div><p class="sobretitulo">04 / CONTATO COM A GUILDA</p><h2 id="titulo-guilda">Nenhuma chama<br>resiste sozinha.</h2><p>A <strong>Vigília das Cinzas</strong> reúne viajantes, curandeiros e guardiões que procuram os sobreviventes de Vhalora. Onde houver uma luz acesa, ainda existe um caminho de volta.</p><div class="acoes-guilda"><a class="botao botao-primario" href="mailto:vigilia@example.com"><span aria-hidden="true">✉</span> Escrever à guilda</a><a class="link-comunidade" href="https://discord.com/" target="_blank" rel="noopener noreferrer">Conhecer o Discord <span class="sr-only">(abre em nova aba)</span></a></div><p class="aviso-contato">Contato fictício: vigilia@example.com. O link do Discord abre a plataforma, não um servidor da guilda.</p></div><blockquote><span aria-hidden="true">“</span><p>Não carrego o fogo<br>para destruir.<br><em>Carrego para lembrar.</em></p><cite>NERO VAEL</cite></blockquote></div></section>
+  </main>
+
+  <!-- Rodapé: identidade e retorno ao início, sem dependência de scripts. -->
+  <footer class="rodape"><div class="container rodape-conteudo"><a class="marca" href="#topo"><span aria-hidden="true">✦</span> NERO VAEL</a><p>Vhalora pode ter caído. Sua história, não.</p><a href="#topo">Voltar ao início</a></div></footer>
+</body>
+</html>

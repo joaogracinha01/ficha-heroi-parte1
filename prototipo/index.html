@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Protótipo | Nero Vael</title>
+  <link rel="stylesheet" href="prototipo.css">
+</head>
+<body>
+  <header class="introducao">
+    <p class="etiqueta">FICHA DE HERÓI · PLANEJAMENTO VISUAL</p>
+    <h1>Nero Vael</h1>
+    <p>Protótipo estrutural criado antes da implementação da ficha. As formas indicam a posição de imagens, ícones e conteúdo; os links permitem experimentar o fluxo entre as quatro seções.</p>
+    <a href="../index.html">Abrir a ficha final</a>
+  </header>
+  <div class="prancha">
+    <nav aria-label="Seções do protótipo"><strong>✦ NERO VAEL</strong><a href="#sobre">Sobre</a><a href="#atributos">Atributos</a><a href="#inventario">Inventário</a><a href="#guilda">Guilda</a></nav>
+    <main>
+      <section id="sobre">
+        <p class="etiqueta">01 / SOBRE O HERÓI</p>
+        <div class="apresentacao">
+          <div><span class="selo">GUARDIÃO PIROMANTE · NÍVEL 24</span><h2>Nero Vael</h2><h3>O Portador da Chama Azul</h3><p>Biografia: sobrevivente de Vhalora, protetor das memórias preservadas na última centelha da cidade.</p><a class="botao" href="#atributos">Explorar habilidades</a><dl><div><dt>Origem</dt><dd>Vhalora</dd></div><div><dt>Guilda</dt><dd>Vigília das Cinzas</dd></div></dl></div>
+          <div class="avatar" role="img" aria-label="Área reservada para o retrato de Nero com uma chama azul nas mãos"><span>✦</span><p>AVATAR / RETRATO</p><small>Ilustração vertical · chama azul</small></div>
+        </div>
+      </section>
+      <section id="atributos"><p class="etiqueta">02 / ATRIBUTOS & HABILIDADES</p><h2>O poder que ainda arde.</h2><div class="duas-colunas"><div><p>✦ Magia · 96/100</p><div class="barra"><span style="width:96%"></span></div><p>◇ Defesa · 82/100</p><div class="barra"><span style="width:82%"></span></div><p>⚡ Agilidade · 74/100</p><div class="barra"><span style="width:74%"></span></div><p>⚔ Força · 68/100</p><div class="barra"><span style="width:68%"></span></div></div><div class="caixa"><h3>Habilidades especiais</h3><p>Ícone + nome + descrição curta de cada poder.</p><ul><li>Fogo da memória</li><li>Manto de brasas</li><li>Passo de cinza</li></ul></div></div></section>
+      <section id="inventario"><p class="etiqueta">03 / INVENTÁRIO & CONQUISTAS</p><h2>Relíquias de uma cidade perdida.</h2><div class="grade"><article class="caixa destaque"><span>✦</span><p>LENDÁRIO</p><h3>Coração de Vhalora</h3><p>Item principal, descrição e efeito.</p></article><article class="caixa"><span>⚔</span><p>RARO</p><h3>Lâmina do Alvorecer</h3><p>Equipamento e descrição.</p></article><article class="caixa"><span>◇</span><p>RARO</p><h3>Manto do Último Vigia</h3><p>Equipamento e descrição.</p></article></div><div class="caixa conquista">✧ Conquistas: sobrevivência, proteção e exploração.</div></section>
+      <section id="guilda"><p class="etiqueta">04 / CONTATO COM A GUILDA</p><h2>Nenhuma chama resiste sozinha.</h2><p>Apresentação da Vigília das Cinzas e canal fictício de contato.</p><a class="botao" href="mailto:vigilia@example.com">Escrever à guilda (fictício)</a><a href="https://discord.com/">Conhecer o Discord</a></section>
+    </main>
+    <footer>✦ Nero Vael · Vigília das Cinzas</footer>
+  </div>
+  <aside class="notas"><h2>Guia de implementação</h2><p><strong>Paleta:</strong> azul-noturno #080F18, azul-chama #82D9F7, ouro #D9B77B, texto #F0F3F7.</p><p><strong>Tipografia:</strong> Cinzel nos títulos; Manrope no texto. <strong>Ritmo:</strong> 8, 16, 24, 32 e 64 px.</p><p><strong>Responsividade:</strong> inventário com 1 coluna abaixo de 640 px, 2 de 640 a 1023 px e 3 a partir de 1024 px. Retrato e texto empilhados no celular.</p><p><strong>UI/UX:</strong> nome e retrato primeiro; barras com números visíveis; raridade escrita; contraste alto; navegação com foco visível; links com pelo menos 44 px de altura.</p></aside>
+</body>
+</html>
