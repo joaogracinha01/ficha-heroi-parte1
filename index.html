@@ -9,8 +9,9 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23080f18'/%3E%3Cpath d='M16 3 20 12 29 16 20 20 16 29 12 20 3 16 12 12Z' fill='%2382d9f7'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
@@ -29,7 +30,7 @@
     </div>
   </header>
 
-  <main id="conteudo">
+  <main id="conteudo" tabindex="-1">
     <!-- 01. Sobre o Herói: identidade, retrato e história original. -->
     <section class="sobre container" id="sobre" aria-labelledby="nome-heroi">
       <div class="apresentacao">
@@ -46,7 +47,7 @@
         </dl>
       </div>
       <figure class="retrato">
-        <img src="imagens/nero-vael.png" alt="Nero Vael, guardião de cabelos escuros e manto azul-noturno, segurando uma chama azul diante das ruínas de Vhalora." width="768" height="1024" fetchpriority="high">
+        <img src="imagens/nero-vael.png" alt="Nero Vael, guardião de cabelos escuros e manto azul-noturno, segurando uma chama azul diante das ruínas de Vhalora." width="768" height="1024" decoding="async" fetchpriority="high">
         <figcaption><span aria-hidden="true">✦</span><div><span class="legenda-menor">ÚLTIMO GUARDIÃO DE VHALORA</span><strong>A chama ainda vive.</strong></div><span class="selo-nivel">NV.<b>24</b></span></figcaption>
       </figure>
       <div class="historia">
@@ -55,7 +56,7 @@
       </div>
     </section>
 
-    <!-- 02. Atributos: números e barras estáticas; habilidades sem JavaScript. -->
+    <!-- 02. Atributos: números e barras acessíveis; habilidades do guardião. -->
     <section class="secao-atributos" id="atributos" aria-labelledby="titulo-atributos">
       <div class="container">
         <div class="cabecalho-secao"><div><p class="sobretitulo">02 / ATRIBUTOS & HABILIDADES</p><h2 id="titulo-atributos">O poder que ainda arde.</h2></div><p>Forjado pela perda. <br>Guiado pela memória.</p></div>

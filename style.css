@@ -3,6 +3,7 @@
    Cores e espaçamentos reutilizados em toda a ficha.
    ========================================================== */
 :root {
+  --altura-cabecalho: 93px;
   --cor-fundo: #080f18;
   --cor-painel: #101d2b;
   --cor-painel-claro: #152638;
@@ -20,7 +21,7 @@
   --fonte-texto: 'Manrope', Arial, sans-serif;
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--altura-cabecalho) + 1rem); }
 body { margin: 0; background: var(--cor-fundo); color: var(--cor-texto); font-family: var(--fonte-texto); font-size: 1rem; line-height: 1.7; }
 img { display: block; max-width: 100%; }
 a { color: inherit; text-underline-offset: .3em; }
@@ -35,11 +36,11 @@ h3 { font-size: 1.2rem; line-height: 1.4; }
 .sobretitulo > span { color: var(--cor-chama); font-size: 1.35rem; vertical-align: middle; margin-right: .6rem; }
 .titulo-pequeno { font-family: var(--fonte-texto); font-size: .875rem; font-weight: 700; letter-spacing: .12em; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-.pular-conteudo { position: absolute; top: -100px; left: 1rem; z-index: 10; padding: 1rem; background: var(--cor-chama); color: var(--cor-fundo); }
+.pular-conteudo { position: absolute; top: -100px; left: 1rem; z-index: 30; padding: 1rem; background: var(--cor-chama); color: var(--cor-fundo); }
 .pular-conteudo:focus { top: 1rem; }
 
 /* 02. Cabeçalho e navegação: Flexbox com espaçamento uniforme. */
-.cabecalho { border-bottom: 1px solid var(--cor-borda); }
+.cabecalho { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid var(--cor-borda); }
 .cabecalho-conteudo { min-height: 92px; display: flex; justify-content: space-between; align-items: center; gap: var(--espaco-lg); }
 .marca { display: inline-flex; align-items: center; gap: .8rem; min-height: 44px; text-decoration: none; font-family: var(--fonte-titulo); font-weight: 600; font-size: 1.05rem; letter-spacing: .12em; white-space: nowrap; }
 .marca > span { color: var(--cor-chama); font-size: 1.8rem; }
@@ -214,7 +215,7 @@ body { background-image: radial-gradient(ellipse at 85% 10%, #12344c55, transpar
 .menu a::after { content: ''; position: absolute; bottom: 3px; left: 0; width: 100%; height: 1px; background: var(--cor-chama); transform: scaleX(0); transform-origin: left; transition: transform .3s ease; box-shadow: 0 0 10px #82d9f780; }
 .menu a:hover::after, .menu a:focus-visible::after { transform: scaleX(1); }
 .sobre { position: relative; isolation: isolate; }
-.sobre::before { content: ''; position: absolute; z-index: -1; top: 5%; right: -1%; width: 60%; height: 600px; pointer-events: none; background: radial-gradient(ellipse, #138de526, transparent 68%); animation: luz-ambiente 7s ease-in-out infinite alternate; }
+.sobre::before { content: ''; position: absolute; z-index: -1; top: 5%; right: -1%; width: 60%; height: 600px; pointer-events: none; background: radial-gradient(ellipse, #138de526, transparent 68%);  }
 .apresentacao { animation: surgir .85s ease-out both; }
 h1 { text-shadow: 0 5px 40px #0008; }
 h1 span { color: #a1e7ff; text-shadow: 0 0 45px #53caff35; }
@@ -225,7 +226,7 @@ h1 span { color: #a1e7ff; text-shadow: 0 0 45px #53caff35; }
 .botao-primario:hover { box-shadow: 0 0 32px #82d9f744, inset 0 1px 0 #fff; }
 .retrato { border-color: #82d9f766; box-shadow: 0 0 0 7px #080f18, 0 0 0 8px #82d9f72b, 0 22px 75px #0009, 0 0 60px #35adff1c; animation: surgir-retrato 1.1s ease-out both; }
 .retrato img { transition: transform 1.2s ease; }
-.retrato::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 40% 54%, #47caff22, transparent 38%); opacity: .3; animation: luz-ambiente 4s ease-in-out infinite alternate; }
+.retrato::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 40% 54%, #47caff22, transparent 38%); opacity: .3;  }
 .retrato figcaption { z-index: 1; }
 .selo-nivel { border: 1px solid #d9b77b70; padding: .45rem .7rem; background: #080f18cc; }
 .historia { border-top-color: #82d9f72b; }
@@ -257,7 +258,6 @@ blockquote em { text-shadow: 0 0 24px #82d9f733; }
 }
 @keyframes surgir { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes surgir-retrato { from { opacity: 0; transform: translateY(22px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
-@keyframes luz-ambiente { from { opacity: .3; } to { opacity: .8; } }
 @keyframes carregar-barra { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @media (max-width: 639px) {
   .retrato { width: calc(100% - 16px); margin-top: .5rem; }
@@ -266,7 +266,21 @@ blockquote em { text-shadow: 0 0 24px #82d9f733; }
   .conquistas li { padding: 1.1rem; }
 }
 
-/* 10. Preferência por menos movimento e impressão. */
+/* 11. Navegação e filtros com aprimoramento progressivo. */
+.menu a[aria-current="location"] { color: var(--cor-chama); border-bottom-color: var(--cor-chama); }
+.menu a[aria-current="location"]::after { transform: scaleX(1); }
+.filtros-inventario { display: flex; flex-wrap: wrap; gap: .75rem; margin-bottom: 1rem; padding: 0; border: 0; min-width: 0; }
+.filtros-inventario legend { margin-bottom: .75rem; color: var(--cor-suave); font-size: .875rem; }
+.filtro { font: inherit; font-size: .875rem; min-height: 44px; padding: .5rem 1rem; cursor: pointer; border: 1px solid var(--cor-borda); border-radius: 3px; background: var(--cor-painel); color: var(--cor-texto); }
+.filtro[aria-pressed="true"] { background: var(--cor-chama); color: var(--cor-fundo); border-color: var(--cor-chama); }
+.filtro:focus-visible { outline: 3px solid var(--cor-ouro); outline-offset: 3px; }
+.resultado-inventario { margin-bottom: 1.5rem; color: var(--cor-suave); font-size: .875rem; }
+.card-item[hidden] { display: none; }
+@media (max-width: 639px) {
+  :root { --altura-cabecalho: 110px; }
+}
+
+/* 12. Preferência por menos movimento e impressão. */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
@@ -274,6 +288,9 @@ blockquote em { text-shadow: 0 0 24px #82d9f733; }
 }
 @media print {
   body { background: white; color: black; }
+  .cabecalho { position: static; }
+  .filtros-inventario, .resultado-inventario { display: none; }
+  .card-item[hidden] { display: flex; }
   .sobre::before, .retrato::after, .card-item::after { display: none; }
   *, *::before, *::after { animation: none !important; text-shadow: none !important; box-shadow: none !important; }
   .menu, .pular-conteudo, .botao, .rodape-conteudo > a:last-child { display: none; }
