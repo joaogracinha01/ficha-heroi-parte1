@@ -281,6 +281,42 @@ blockquote em { text-shadow: 0 0 24px #82d9f733; }
 }
 
 /* 12. Preferência por menos movimento e impressão. */
+.alternar-menu { display: none; }
+.ajuda-interacao { color: var(--cor-suave); font-size: .875rem; margin: -1rem 0 1.5rem; }
+.controle-atributo { display: grid; gap: .4rem; margin-top: .7rem; color: var(--cor-suave); font-size: .75rem; }
+.controle-atributo input { width: 100%; min-width: 0; min-height: 44px; margin: 0; accent-color: var(--cor-chama); cursor: pointer; }
+.controle-atributo input:focus-visible, .busca-inventario input:focus-visible { outline: 3px solid var(--cor-ouro); outline-offset: 3px; }
+.preenchimento { transition: width .18s ease; }
+.resumo-treino { color: var(--cor-chama); margin-block: 1rem; font-size: .875rem; }
+.usar-habilidade { display: block; margin-top: .8rem; }
+.filtro:hover:not(:disabled) { border-color: var(--cor-chama); }
+.filtro:disabled { opacity: .5; cursor: not-allowed; }
+.treino-mana { padding: 1.4rem; margin-top: 2rem; border: 1px solid var(--cor-borda); border-radius: 3px; background: var(--cor-fundo); }
+.treino-mana > p { font-size: .875rem; }
+.treino-mana > p[role="status"] { color: var(--cor-suave); min-height: 3.4em; margin-bottom: 1rem; }
+.treino-mana meter { display: block; width: 100%; height: 24px; margin-block: .8rem; accent-color: var(--cor-chama); }
+.busca-inventario { display: grid; gap: .5rem; max-width: 32rem; margin-bottom: 1.5rem; color: var(--cor-suave); font-size: .875rem; }
+.busca-inventario input { font: inherit; font-size: 1rem; color: var(--cor-texto); background: var(--cor-painel); border: 1px solid var(--cor-borda); border-radius: 3px; min-height: 48px; padding: .7rem 1rem; width: 100%; min-width: 0; }
+.busca-inventario input::placeholder { color: var(--cor-suave); opacity: 1; }
+@media (max-width: 639px) {
+  .menu-interativo .cabecalho-conteudo { flex-direction: row; flex-wrap: wrap; min-height: 76px; padding-block: .6rem; gap: .3rem 1rem; }
+  .menu-interativo .alternar-menu { display: inline-flex; align-items: center; justify-content: center; margin-left: auto; }
+  .menu-interativo .menu { display: none; flex-basis: 100%; flex-wrap: wrap; padding-top: .5rem; }
+  .menu-interativo.menu-aberto .menu { display: flex; }
+  .menu-interativo .menu a { flex: 1 1 40%; justify-content: center; }
+  .usar-habilidade, .restaurar-atributos, .treino-mana .filtro { width: 100%; }
+  .filtros-inventario .filtro { flex: 1 1 auto; }
+  .treino-mana { padding: 1rem; }
+  .classe { overflow-wrap: anywhere; }
+  .selo-nivel { flex-shrink: 0; }
+}
+@media (max-width: 359px) {
+  .container { width: calc(100% - 2rem); }
+  .marca { font-size: .8rem; gap: .4rem; letter-spacing: .06em; }
+  .retrato figcaption strong { font-size: .9rem; }
+  .retrato figcaption { padding-inline: .75rem; }
+  .selo-nivel { display: none; }
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
@@ -291,6 +327,7 @@ blockquote em { text-shadow: 0 0 24px #82d9f733; }
   .cabecalho { position: static; }
   .filtros-inventario, .resultado-inventario { display: none; }
   .card-item[hidden] { display: flex; }
+  .alternar-menu, .controle-atributo, .resumo-treino, .restaurar-atributos, .ajuda-interacao, .usar-habilidade, .treino-mana, .busca-inventario { display: none !important; }
   .sobre::before, .retrato::after, .card-item::after { display: none; }
   *, *::before, *::after { animation: none !important; text-shadow: none !important; box-shadow: none !important; }
   .menu, .pular-conteudo, .botao, .rodape-conteudo > a:last-child { display: none; }
